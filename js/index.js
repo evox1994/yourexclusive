@@ -27,6 +27,7 @@ $(document).ready(function(){
 		$('.b-3-slider').removeClass('active');
 		$('.catalog-list li').removeClass('active');
 		$(el).addClass('active');
+		$('.b-3-slider').slick('reinit');
 	}
 	filterCat();
 
