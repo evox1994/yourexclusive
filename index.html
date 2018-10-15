@@ -40,6 +40,9 @@
 						<li><a href="#b-9" class="scroll-btn">Контакты</a></li>
 					</ul>
 				</div>
+				<div class="mobile-btn">
+					<div class="mobile-btn-el"></div>
+				</div>
 				<div class="header-basket">
 					<a href="#"><img src="i/basket-img.png"><span><b>0</b> руб.</span></a>
 				</div>
@@ -52,9 +55,6 @@
 				</div>
 				<div class="header-text">Ручное производство спортивных сувениров с доставкой по всему миру</div>
 				<div class="header-select"></div>
-				<div class="mobile-btn">
-					<div class="mobile-btn-el"></div>
-				</div>
 				<div class="header-phone">
 					<a href="tel: 88008292311">8 (800) 829-23-11</a>
 				</div>
@@ -78,8 +78,8 @@
 				</ul>
 			</div>
 			<div class="header-select"></div>
-			<div class="header-basket">
-				<a href="#"><img src="i/basket-img.png"><span><b>0</b> руб.</span></a>
+			<div class="header-phone">
+				<a href="tel: 88008292311">8 (800) 829-23-11</a>
 			</div>
 		</div>
 	</div>
@@ -90,7 +90,10 @@
 				<div class="b-1-slide">
 					<div class="slide-wrap">
 						<h2>Приобретите в свою коллекцию сувенир Вашего любимого вида спорта</h2>
-						<img src="i/b-1-img.png" class="abs-img">
+						<div class="abs-img">
+							<img src="i/b-1-img.png" class="anim-img active" id="anim-1-1" data-next="#anim-1-2" data-prev="#anim-1-2">
+							<img src="i/b-1-img.png" id="anim-1-2" data-next="#anim-1-1" data-prev="#anim-1-1">
+						</div>
 						<p>с изготовлением до <span>5 дней</span><br> и доставкой в любую точку <span>мира</span></p>
 						<a href="#b-3" class="b-1-btn scroll-btn">Выбрать сувенир</a>
 					</div>
@@ -98,7 +101,10 @@
 				<div class="b-1-slide">
 					<div class="slide-wrap">
 						<h2>Приобретите в свою коллекцию сувенир Вашего любимого вида спорта</h2>
-						<img src="i/b-1-img.png" class="abs-img">
+						<div class="abs-img">
+							<img src="i/b-1-img.png" class="anim-img active" id="anim-2-1" data-next="#anim-2-2" data-prev="#anim-2-2">
+							<img src="i/b-1-img.png" id="anim-2-2" data-next="#anim-2-1" data-prev="#anim-2-1">
+						</div>
 						<p>с изготовлением до <span>5 дней</span><br> и доставкой в любую точку <span>мира</span></p>
 						<a href="#b-3" class="b-1-btn scroll-btn">Выбрать сувенир</a>
 					</div>
@@ -234,7 +240,7 @@
 							<img src="i/cat-img-1.png">
 						</div>
 						<div class="catalog-name">Коньки 80049586</div>
-						<a href="#" class="catalog-example">Пример живой работы</a>
+						<a href="#" class="catalog-example fancybox">Пример живой работы</a>
 						<p>Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
 						<div class="catalog-price"><span>9 000</span></div>
 						<div class="catalog-buttons clearfix">
@@ -356,18 +362,18 @@
 				<li data-filter=".fil-3">Индивидуальные заказы</li>
 			</ul>
 			<ul class="b-5-list">
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-1.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-2.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-3.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-4.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-3.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-4.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-1.jpg"></a></li>
-				<li class="fil-1"><a href="#" class="fancybox"><img src="i/b-5-img-2.jpg"></a></li>
-				<li class="fil-2"><a href="#" class="fancybox"><img src="i/b-5-img-1.jpg"></a></li>
-				<li class="fil-2"><a href="#" class="fancybox"><img src="i/b-5-img-2.jpg"></a></li>
-				<li class="fil-3"><a href="#" class="fancybox"><img src="i/b-5-img-4.jpg"></a></li>
-				<li class="fil-3"><a href="#" class="fancybox"><img src="i/b-5-img-3.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-1.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-1.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-2.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-2.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-3.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-3.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-4.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-4.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-3.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-3.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-4.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-4.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-1.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-1.jpg"></a></li>
+				<li class="fil-1"><a href="i/b-5-img-2.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-2.jpg"></a></li>
+				<li class="fil-2"><a href="i/b-5-img-1.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-1.jpg"></a></li>
+				<li class="fil-2"><a href="i/b-5-img-2.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-2.jpg"></a></li>
+				<li class="fil-3"><a href="i/b-5-img-4.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-4.jpg"></a></li>
+				<li class="fil-3"><a href="i/b-5-img-3.jpg" class="fancybox" data-fancybox="image"><img src="i/b-5-img-3.jpg"></a></li>
 			</ul>
 			<a href="#" class="b-5-btn">Показать еще</a>
 		</div>
@@ -378,7 +384,7 @@
 			<h2>Отзывы</h2>
 			<ul class="reviews">
 				<li>
-					<img src="i/b-6-img.jpg" class="reviews-image">
+					<div class="reviews-image"><img src="i/b-6-img.jpg"></div>
 					<div class="reviews-text">
 						<div class="name">Иванов Иван Иванович</div>
 						<p>живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана.</p>
@@ -386,7 +392,9 @@
 					</div>
 				</li>
 				<li>
-					<img src="i/b-6-img.jpg" class="reviews-image">
+					<div class="reviews-image">
+						<iframe src="https://www.youtube.com/embed/KyyvXziUGCQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 					<div class="reviews-text">
 						<div class="name">Иванов Иван Иванович</div>
 						<p>живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана.</p>
@@ -394,7 +402,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="i/b-6-img.jpg" class="reviews-image">
+					<div class="reviews-image"><img src="i/b-6-img.jpg"></div>
 					<div class="reviews-text">
 						<div class="name">Иванов Иван Иванович</div>
 						<p>живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения Семантика большого языкового океана.</p>
@@ -427,16 +435,16 @@
 			<h2>Доставим в любую точку мира</h2>
 			<div class="b-8-map">
 				<img src="i/map.png">
-				<a href="#" class="map-el map-el-1 fancybox"></a>
-				<a href="#" class="map-el map-el-2 fancybox"></a>
-				<a href="#" class="map-el map-el-3 fancybox"></a>
-				<a href="#" class="map-el map-el-4 fancybox"></a>
-				<a href="#" class="map-el map-el-5 fancybox"></a>
-				<a href="#" class="map-el map-el-6 fancybox"></a>
-				<a href="#" class="map-el map-el-7 fancybox"></a>
-				<a href="#" class="map-el map-el-8 fancybox"></a>
-				<a href="#" class="map-el map-el-9 fancybox"></a>
-				<a href="#" class="map-el map-el-10 fancybox"></a>
+				<a href="i/logo.png" class="map-el map-el-1 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-2 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-3 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-4 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-5 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-6 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-7 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-8 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-9 fancybox"><img src="i/logo.png"></a>
+				<a href="i/logo.png" class="map-el map-el-10 fancybox"><img src="i/logo.png"></a>
 			</div>
 			<ul class="b-8-list">
 				<li>
@@ -510,7 +518,7 @@
 						<li>ИНН 405003858</li>
 						<li>ОГРН 47589509596006</li>
 					</ul>
-					<ul>
+					<ul class="policy-list">
 						<li><a href="#" target="_blank">Политика конфиденциальности</a></li>
 						<li><a href="#" target="_blank">Политика обработки персональных данных</a></li>
 						<li><a href="#" target="_blank">Условия оплаты и доставки</a></li>
