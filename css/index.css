@@ -223,6 +223,20 @@ body {
 .b-2-slide img {
 	margin: 0 auto;
 	max-width: 100%;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.b-2-slide.slick-active img {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
 }
 .b-2-slider .slick-arrow {
 	position: absolute;

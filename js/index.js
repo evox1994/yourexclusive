@@ -1,7 +1,15 @@
 $(document).ready(function(){
 
 	$('.b-1-slider').slick();
-	$('.b-2-slider').slick();
+	$('.b-2-slider').slick({
+		fade: true,
+		speed: 500,
+		infinite: true,
+		cssEase: 'linear',
+		adaptiveHeight: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 	$('.b-3-slider').slick();
 	$('.b-7-slider').slick({
 		slidesToShow: 5,
