@@ -244,10 +244,10 @@
     // ==============
 
     // Try to focus on the first focusable element after opening
-    autoFocus: true,
+    autoFocus: false,
 
     // Put focus back to active element after closing
-    backFocus: true,
+    backFocus: false,
 
     // Do not let user to focus on element outside modal content
     trapFocus: true,

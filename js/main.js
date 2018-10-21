@@ -54,4 +54,63 @@ $(document).ready(function(){
 
 	$('.fancybox').fancybox();
 
+	$('.select-area').click(function(){
+		if ( $(this).hasClass('active') ) {
+			$(this).removeClass('active');
+			$('.select-open').removeClass('active');
+		} else {
+			$(this).addClass('active');
+			$('.select-open').addClass('active');
+		}
+	});
+
+	$('.select-open a').click(function(){
+		var val = $(this).attr('href');
+		$('.select-open').removeClass('active');
+		$('.select-area').removeClass('active');
+		$('.select-area span').removeClass('active');
+		$(val).addClass('active');
+		return false;
+	});
+
+	$('.catalog-buttons .more-btn').click(function(){
+		var el = $(this).attr('href');
+		$(el).click();
+		return false;
+	});
+
+	$('input[type="tel"]').inputmask('+7 (999) 999-99-99');
+
+	$('body').on('click','.photo-btn',function(){
+		var el = $(this).attr('href');
+		$(el).click();
+		return false;
+	});
+	$('body').on('change','.photo-wrap input[type="file"]',function(){
+		files = this.files;
+		$(this).closest('.photo-wrap').find('.photo-btn').text(files[0].name);
+	});
+	$('.popup .add-btn').click(function(){
+		var col = Number($(this).attr('data-col'));
+		col++;
+		$(this).parent().find('.photos').append('<div class="photo-wrap"><a href="#file-input-'+col+'" class="photo-btn">Прикрепить фотографию</a><input type="file" class="hide-input" id="file-input-'+col+'"></div>');
+		$(this).attr('data-col',col);
+	});
+
+	$('.popup-radio ul li label').click(function(){
+		if ( !$(this).hasClass('active') ) {
+			$('.popup-radio ul li label').removeClass('active');
+			$(this).addClass('active');
+		}
+	});
+
+	$('.radio-btn').click(function(){
+		if ( $(this).hasClass('active') ) {
+			$(this).removeClass('active');
+		} else {
+			$(this).removeClass('error');
+			$(this).addClass('active');
+		}
+	});
+
 });
