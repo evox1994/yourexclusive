@@ -1,0 +1,129 @@
+.back-line {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(246, 247, 249);
+	text-align: left;
+	z-index: 100;
+}
+.back-line .b-block {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.back-line a {
+	display: inline-block;
+	position: relative;
+	font-size: 15px;
+	color: rgb(77, 77, 77);
+	padding-left: 35px;
+	-webkit-filter: brightness(2);
+	-moz-filter: brightness(2);
+	-ms-filter: brightness(2);
+	filter: brightness(2);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.back-line a:hover {
+	-webkit-filter: brightness(1);
+	-moz-filter: brightness(1);
+	-ms-filter: brightness(1);
+	filter: brightness(1);
+}
+.back-line a::before {
+	content: '';
+	display: block;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 13px);
+	background-image: url('../i/b-1-prev.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.b-1 .b-block {
+	padding-top: 104px;
+	padding-bottom: 90px;
+}
+.b-1-wrap {
+	position: relative;
+	box-sizing: border-box;
+	min-height: calc(100vh - 194px);
+	padding-bottom: 145px;
+	padding-left: 48%;
+}
+.b-1-wrap .abs-img {
+	display: block;
+	max-width: 52%;
+	max-height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.error-num {
+	font-family: 'FiraSans-Bold';
+	font-size: 200px;
+	color: rgb(137, 159, 165);
+	margin-bottom: 44px;
+	position: relative;
+	z-index: 1;
+}
+.error-text {
+	font-family: 'FiraSans-Bold';
+	font-size: 50px;
+	color: rgb(77, 77, 77);
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 1;
+}
+.error-try {
+	font-family: 'FiraSans-Bold';
+	font-size: 22px;
+	color: rgb(66, 63, 63);
+	line-height: 1.2;
+	margin-bottom: 45px;
+	position: relative;
+	z-index: 1;
+}
+.b-1-btn {
+	display: inline-block;
+	padding: 15px 30px;
+	box-sizing: border-box;
+	max-width: 100%;
+	background-color: rgb(200, 197, 192);
+	border-radius: 100px;
+	color: #ffffff;
+	font-family: 'FiraSans-Bold';
+	font-size: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+	.b-1-wrap {
+		padding-bottom: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.back-line {
+		text-align: center;
+	}
+	.b-1-wrap {
+		padding-left: 0;
+	}
+	.b-1-wrap .abs-img {
+		display: none;
+	}
+	.error-num {
+		font-size: 150px;
+	}
+}

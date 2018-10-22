@@ -73,12 +73,6 @@ $(document).ready(function(){
 		return false;
 	});
 
-	$('.catalog-buttons .more-btn').click(function(){
-		var el = $(this).attr('href');
-		$(el).click();
-		return false;
-	});
-
 	$('input[type="tel"]').inputmask('+7 (999) 999-99-99');
 
 	$('body').on('click','.photo-btn',function(){

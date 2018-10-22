@@ -1,4 +1,15 @@
 $(document).ready(function(){
+	var orderEl = {}; //price,imgsrc,col,prodId
+	var orderArr = JSON.parse(localStorage.getItem("yourexclusive-order"));
+	var summa = Number(localStorage.getItem("yourexclusive-summa"));
+	var order = [];
+
+	if ( orderArr ) {
+		for (var i = 0; i < orderArr.length; i++) {
+			order.push(orderArr[i]);
+		}
+		$('.header-basket span b').text(summa);
+	}
 
 	$('.b-1-slider').slick();
 	$('.b-2-slider').slick({
@@ -130,5 +141,72 @@ $(document).ready(function(){
 			$(el).removeClass('move');
 		},510);
 	},4000);
+
+	$('.catalog-buttons .more-btn').click(function(){
+		var el = $(this).attr('href');
+		var img = $(this).closest('.catalog-wrap').find('.catalog-image img').attr('src');
+		var price = $(this).closest('.catalog-wrap').find('.catalog-price span').text();
+		var prod_id = '#' + $(this).closest('li').attr('id');
+
+		$('.product-image a').attr('href',img);
+		$('.product-image img').attr('src',img);
+		$('.product-example').attr('href',img);
+		$('.product-price span').text(price);
+		$('.product-btn').attr('href',prod_id);
+		$(el).click();
+		return false;
+	});
+
+	function Zak(el) {
+		var nal = false;
+		var prod = $(el).attr('href');
+		var prod_id = $(prod).attr('id');
+		var clone = {};
+		var numt = 0;
+		var coli = 0;
+		var qwe;
+
+		orderEl.imgsrc = $(prod).find('.catalog-image img').attr('src');
+		orderEl.price = Number($(prod).find('.catalog-price span').text());
+		orderEl.prodId = prod_id;
+		if ( order.length ) {
+			for (var i = 0; i < order.length; i++) {
+				if ( order[i].prodId == prod_id ) {
+					nal = true;
+					numt = i;
+					coli = Number(order[i].col);
+					break;
+				} else {
+					numt = order.length;
+				}
+			}
+			if (nal) {
+				orderEl.col = coli + 1;
+			} else {
+				orderEl.col = 1;
+			}
+		} else {
+			orderEl.col = 1;
+		}
+		for (var key in orderEl) {
+			clone[key] = orderEl[key];
+		}
+		order[numt] = clone;
+		summa = summa + Number(order[numt].price);
+		$('.header-basket span b').text(summa);
+		qwe = JSON.stringify(order);
+		localStorage.setItem("yourexclusive-order",qwe);
+		localStorage.setItem("yourexclusive-summa",summa);
+	}
+
+	$('.choose-btn').click(function(){
+		Zak(this);
+		return false;
+	});
+
+	$('.product-btn').click(function(){
+		Zak(this);
+		return false;
+	});
 
 });
