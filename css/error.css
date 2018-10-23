@@ -54,11 +54,11 @@
 	box-sizing: border-box;
 	min-height: calc(100vh - 194px);
 	padding-bottom: 145px;
-	padding-left: 48%;
+	padding-left: 50%;
 }
 .b-1-wrap .abs-img {
 	display: block;
-	max-width: 52%;
+	max-width: 48%;
 	max-height: 100%;
 	position: absolute;
 	left: 0;

@@ -340,7 +340,7 @@ input:-moz-placeholder {
 .header-logo {
 	display: inline-block;
 	vertical-align: top;
-	width: 184px;
+	width: 178px;
 	margin-right: 4px;
 }
 .header-logo a {
@@ -803,6 +803,16 @@ input:-moz-placeholder {
 	color: #899fa5;
 	font-size: 16px;
 	margin-bottom: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.product-example:hover {
+	-webkit-filter: brightness(0.8);
+	-moz-filter: brightness(0.8);
+	-ms-filter: brightness(0.8);
+	filter: brightness(0.8);
 }
 .popup-product p {
 	display: block;
@@ -844,6 +854,9 @@ input:-moz-placeholder {
 	width: 100%;
 	text-align: center;
 }
+.product-btn.active {
+	display: none;
+}
 .product-btn span {
 	display: inline-block;
 	max-width: 100%;
@@ -863,6 +876,56 @@ input:-moz-placeholder {
 	width: 28px;
 	height: 26px;
 	background-image: url('../i/basket-icon-h.png');
+}
+.product-buttons {
+	display: none;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+}
+.product-buttons.active {
+	display: block;
+}
+.product-buttons .count-btn {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	background-color: rgb(200, 197, 192);
+	position: relative;
+	width: 27px;
+	height: 27px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.product-buttons .count-btn:hover {
+	cursor: pointer;
+	background-color: rgb(158, 155, 151);
+}
+.product-buttons .count-btn span {
+	display: block;
+	font-family: 'FiraSans-Bold';
+	color: #ffffff;
+	font-size: 18px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -47%);
+	-moz-transform: translate(-50%, -47%);
+	-ms-transform: translate(-50%, -47%);
+	transform: translate(-50%, -47%);
+}
+.product-buttons .product-col {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: calc(100% - 62px);
+	min-width: 55px;
+	padding: 0 5px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: rgb(66, 63, 63);
 }
 
 .popup {

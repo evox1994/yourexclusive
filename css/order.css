@@ -241,9 +241,14 @@
 	position: relative;
 	width: 27px;
 	height: 27px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .li-count .count-btn:hover {
 	cursor: pointer;
+	background-color: rgb(158, 155, 151);
 }
 .li-count .count-btn p {
 	display: block;
@@ -276,9 +281,17 @@
 	right: 25px;
 	top: calc(50% - 12px);
 	background-image: url('../i/del-icon.png');
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .li-del:hover {
 	cursor: pointer;
+	-webkit-filter: brightness(0.8);
+	-moz-filter: brightness(0.8);
+	-ms-filter: brightness(0.8);
+	filter: brightness(0.8);
 }
 .order-sum {
 	font-family: 'FiraSans-Regular';
@@ -455,6 +468,15 @@
 	font-family: 'FiraSans-Regular';
 	font-size: 16px;
 	line-height: 1;
+	color: #9299a2;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.chosen-container .chosen-results li:hover, .chosen-container .chosen-results li.result-selected {
+	background: none;
+	color: #000000;
 }
 .chosen-container-single .chosen-search input[type="text"] {
 	border: 1px solid rgb(229, 229, 229);
@@ -596,9 +618,14 @@
 	width: 20px;
 	height: 20px;
 	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .radio-list li label:hover {
 	cursor: pointer;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
 .radio-list li label.active::before {
 	content: '';

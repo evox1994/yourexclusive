@@ -90,7 +90,7 @@ $(document).ready(function(){
 				break;
 			}
 		}
-		summa = summa - order[numt].price;
+		summa = summa - (order[numt].price * order[numt].col);
 		$(prod).remove();
 		order.splice(numt,1);
 		$('.order-sum span').text(summa);

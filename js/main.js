@@ -73,6 +73,14 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('body').on('click',function(e){
+		var container = $('.header-select');
+		if (container.has(e.target).length === 0) {
+			$('.select-open').removeClass('active');
+			$('.select-area').removeClass('active');
+		}
+	});
+
 	$('input[type="tel"]').inputmask('+7 (999) 999-99-99');
 
 	$('body').on('click','.photo-btn',function(){
@@ -104,6 +112,30 @@ $(document).ready(function(){
 		} else {
 			$(this).removeClass('error');
 			$(this).addClass('active');
+		}
+	});
+
+	$('form button[type="submit"]').click(function(){
+		if ( $(this).closest('form').find('.button-text .radio-btn').hasClass('active') ) {
+			$(this).closest('form').find('input.required').each(function(){
+				if(!$(this).val().length) { 
+					event.preventDefault(); 
+					$(this).addClass("error"); 
+				} else { 
+					$(this).removeClass("error"); 
+				} 
+			});
+			$(this).closest('form').find('textarea.required').each(function(){
+				if(!$(this).val().length) { 
+					event.preventDefault(); 
+					$(this).addClass("error"); 
+				} else { 
+					$(this).removeClass("error"); 
+				} 
+			});
+		} else {
+			$(this).closest('form').find('.button-text .radio-btn').addClass('error');
+			event.preventDefault();
 		}
 	});
 
