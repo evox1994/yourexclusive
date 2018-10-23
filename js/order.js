@@ -102,7 +102,7 @@ $(document).ready(function(){
 	$('.b-1 .add-btn').click(function(){
 		var col = Number($(this).attr('data-col'));
 		col++;
-		$(this).parent().find('.photos').append('<div class="photo-wrap"><a href="#photo-input-'+col+'" class="photo-btn">Прикрепить фотографию</a><input type="file" class="hide-input" id="photo-input-'+col+'"></div>');
+		$(this).parent().find('.photos').append('<div class="photo-wrap"><a href="#photo-input-'+col+'" class="photo-btn">Прикрепить фотографию</a><input type="file" class="hide-input" id="photo-input-'+col+'" accept=".gif,.jpg,.png,.svg"></div>');
 		$(this).attr('data-col',col);
 	});
 

@@ -1726,6 +1726,9 @@ body {
 	.b-1-slide .abs-img img {
 		max-height: calc(100% - 10px);
 	}
+	.b-1-slide .abs-img img.active {
+		top: calc(50% + 5px);
+	}
 	.b-1-slide h2::before {
 		left: calc(50% - 80px);
 	}
