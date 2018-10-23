@@ -530,12 +530,20 @@ input:-moz-placeholder {
 	position: relative;
 	padding: 3px 0 3px 49px;
 	font-size: 18px;
-	color: rgb(77, 77, 77);
+	/*color: rgb(77, 77, 77);*/
+	color: #9299a2;
 	line-height: 1.2;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	margin-bottom: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.header-select .select-open a:hover {
+	color: #000000;
 }
 .header-select .select-open a:last-child {
 	margin-bottom: 0;

@@ -66,11 +66,7 @@ $(document).ready(function(){
 		$('.b-5-list li').removeClass('active');
 		setTimeout(function(){
 			$('.b-5-list li').css('display','none');
-			if ( $(window).width() > 768 ) {
-				$(el).css('display','inline-block');
-			} else {
-				$(el).css('display','block');
-			}
+			$(el).css('display','inline-block');
 			setTimeout(function(){$(el).addClass('active');},100);
 		},300);
 	}
@@ -141,6 +137,21 @@ $(document).ready(function(){
 			$(el).removeClass('move');
 		},510);
 	},4000);
+
+	$('.catalog-image a').click(function(){
+		var el = $(this).attr('href');
+		var img = $(this).closest('.catalog-wrap').find('.catalog-image img').attr('src');
+		var price = $(this).closest('.catalog-wrap').find('.catalog-price span').text();
+		var prod_id = '#' + $(this).closest('li').attr('id');
+
+		$('.product-image a').attr('href',img);
+		$('.product-image img').attr('src',img);
+		$('.product-example').attr('href',img);
+		$('.product-price span').text(price);
+		$('.product-btn').attr('href',prod_id);
+		$(el).click();
+		return false;
+	});
 
 	$('.catalog-buttons .more-btn').click(function(){
 		var el = $(this).attr('href');
