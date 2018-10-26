@@ -1200,6 +1200,10 @@ input:-moz-placeholder {
 	height: 0 !important;
 	border: 0 !important;
 }
+.popup iframe {
+	width: 100%;
+	min-height: 300px;
+}
 
 .fancybox-close-small {
 	width: 30px;
@@ -1359,5 +1363,8 @@ input:-moz-placeholder {
 		display: block;
 		width: 100%;
 		margin-bottom: 10px;
+	}
+	.popup iframe {
+		min-height: 277px;
 	}
 }
